@@ -1,6 +1,6 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'package:carousel_slider/carousel_slider.dart';
+import '/custom_code/widgets/index.dart' as custom_widgets;
 import 'package:flutter/material.dart';
 import 'main_page_model.dart';
 export 'main_page_model.dart';
@@ -41,61 +41,12 @@ class _MainPageWidgetState extends State<MainPageWidget> {
       child: Scaffold(
         key: scaffoldKey,
         backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
-        body: SizedBox(
+        body: const SizedBox(
           width: double.infinity,
-          height: 180.0,
-          child: CarouselSlider(
-            items: [
-              ClipRRect(
-                borderRadius: BorderRadius.circular(8.0),
-                child: Image.network(
-                  'https://picsum.photos/seed/841/600',
-                  width: 300.0,
-                  height: 200.0,
-                  fit: BoxFit.cover,
-                ),
-              ),
-              ClipRRect(
-                borderRadius: BorderRadius.circular(8.0),
-                child: Image.network(
-                  'https://picsum.photos/seed/707/600',
-                  width: 300.0,
-                  height: 200.0,
-                  fit: BoxFit.cover,
-                ),
-              ),
-              ClipRRect(
-                borderRadius: BorderRadius.circular(8.0),
-                child: Image.network(
-                  'https://picsum.photos/seed/194/600',
-                  width: 300.0,
-                  height: 200.0,
-                  fit: BoxFit.cover,
-                ),
-              ),
-              ClipRRect(
-                borderRadius: BorderRadius.circular(8.0),
-                child: Image.network(
-                  'https://picsum.photos/seed/434/600',
-                  width: 300.0,
-                  height: 200.0,
-                  fit: BoxFit.cover,
-                ),
-              ),
-            ],
-            carouselController: _model.carouselController ??=
-                CarouselController(),
-            options: CarouselOptions(
-              initialPage: 1,
-              viewportFraction: 0.5,
-              disableCenter: true,
-              enlargeCenterPage: true,
-              enlargeFactor: 0.25,
-              enableInfiniteScroll: true,
-              scrollDirection: Axis.horizontal,
-              autoPlay: false,
-              onPageChanged: (index, _) => _model.carouselCurrentIndex = index,
-            ),
+          height: double.infinity,
+          child: custom_widgets.CustomMap(
+            width: double.infinity,
+            height: double.infinity,
           ),
         ),
       ),
